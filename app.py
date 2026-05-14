@@ -61,7 +61,7 @@ if user_query:
             final_answer = ""
             run_chunks = []
             
-            y
+            
             for msg in messages:
                 
                 # Check for Tool Messages (Retrieved chunks from vector_search)
@@ -73,7 +73,7 @@ if user_query:
                             st.json(parsed_chunks)
                             run_chunks.append(parsed_chunks)
                         except json.JSONDecodeError:
-                            # Fallback to plain text
+                            
                             st.write(msg.content)
                             run_chunks.append(msg.content)
                     tool_call_counter += 1
